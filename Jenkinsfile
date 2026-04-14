@@ -4,13 +4,13 @@ pipeline {
     stages { 
         stage('Install Dependencies') { 
             steps { 
-                bat 'pip3 install -r requirements.txt' 
+                sh 'pip3 install -r requirements.txt' 
             } 
         } 
  
         stage('Run Tests') { 
             steps { 
-                bat 'python -m unittest' 
+                sh 'python -m unittest' 
             } 
         } 
     } 
